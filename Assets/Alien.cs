@@ -6,7 +6,7 @@ public class Alien : MonoBehaviour
 //it inherits MonoBehaviour, which provides the ability to be attached to GameObjects and to have lifecycle methods like Start, Update, and FixedUpdate
 {
     [Header("Inscribed")]
-
+    public GameObject explosionPrefab;
     public GameObject bulletPrefab;
     public AlienFleet fleet;
     // bullet template
@@ -51,6 +51,7 @@ public class Alien : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         fleet.RemoveAlien(gameObject); //P4.2 simplify statement get rid of redundant fleet.GetComponent<AlienFleet>()
         Destroy(gameObject);
         Destroy(coll.gameObject);

@@ -3,7 +3,7 @@ using UnityEngine;
 public class AlienBullet : MonoBehaviour
 {
     [Header("Inscribed")]
-
+    public GameObject explosionPrefab; //to give explosion effect when hit by a bullet
     static float speed = .1f;
     // speed at which the bullet moves downward
 
@@ -37,6 +37,7 @@ public class AlienBullet : MonoBehaviour
     {
         if (coll.gameObject.GetComponent<Spaceship>() != null)
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             GameManager.instance.LoseLife();
         }
         Destroy(gameObject);   // the bullet is always used up on impact
