@@ -1,5 +1,6 @@
 # Space Invaders Project
 By: Aquila Nuzhat
+
 ## Main Requirements
 - [x] Make the remaining aliens speed up as their compatriots are destroyed.
 - [x] Detect when the aliens have reached a point on the screen that the game is no longer
@@ -23,6 +24,8 @@ public void RemoveAlien(GameObject alien){
 ### Detect When Aliens reach point of end game
  In `FixedUpdate` function of `AlienFleet.cs` file, we have a for loop which updates direction fleet is moving in. We set the lower boundary of fleet as a public float, 
  and continuously check if lower boundary approached spaceship. If it reaches the spaceship, we call upon the endgame panel screen.  
+
+ The lower boundary is a bit low, but I didn't want to change the value again ;;
 
  ```
 // P2: keep track of lowest alien in fleet if it goes below the spaceship, game over
@@ -57,3 +60,6 @@ We check if its position goes beyond right or left boundaries when key is presse
 - [x] Implement lives (with a related graphic or textual display): I used textual display, may do hearts if I get time
 - [x] Replace the background: did a canvas background that is galaxy themed
 - [x] Add animations when collisions occur: explosion effect added to spaceship and alien, triggered when collision occurs. 
+
+## Demo of Main Features
+<img src = 'gif/space-invaders-demo.gif'>
