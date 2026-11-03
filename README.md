@@ -1,3 +1,5 @@
+# Space Invaders Project
+By: Aquila Nuzhat
 ## Main Requirements
 - [x] Make the remaining aliens speed up as their compatriots are destroyed.
 - [x] Detect when the aliens have reached a point on the screen that the game is no longer
